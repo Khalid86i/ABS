@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شركة ABC - تسجيل ساعات العمل</title>
+    <title>شركة ABC - إنشاء حساب الموظفين</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -35,29 +35,34 @@
 </head>
 <body>
     <div class="container">
-        <h1>شركة ABC - تسجيل ساعات العمل</h1>
-        <form action="submit_hours.php" method="POST">
+        <h1>شركة ABC - إنشاء حساب الموظفين</h1>
+        <form action="register.php" method="POST">
             <div class="mb-3">
                 <label for="employee-id" class="form-label">رقم الموظف:</label>
                 <input type="text" id="employee-id" name="employee_id" class="form-control" placeholder="أدخل رقم الموظف" required>
             </div>
 
             <div class="mb-3">
-                <label for="date" class="form-label">التاريخ:</label>
-                <input type="date" id="date" name="date" class="form-control" required>
+                <label for="username" class="form-label">اسم المستخدم:</label>
+                <input type="text" id="username" name="username" class="form-control" placeholder="أدخل اسم المستخدم" required>
             </div>
 
             <div class="mb-3">
-                <label for="start-time" class="form-label">وقت البدء:</label>
-                <input type="time" id="start-time" name="start_time" class="form-control" required>
+                <label for="email" class="form-label">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="أدخل البريد الإلكتروني" required>
             </div>
 
             <div class="mb-3">
-                <label for="end-time" class="form-label">وقت الانتهاء:</label>
-                <input type="time" id="end-time" name="end_time" class="form-control" required>
+                <label for="password" class="form-label">كلمة المرور:</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="أدخل كلمة المرور" required>
             </div>
 
-            <button type="submit" class="btn btn-primary w-100">تسجيل</button>
+            <div class="mb-3">
+                <label for="confirm-password" class="form-label">تأكيد كلمة المرور:</label>
+                <input type="password" id="confirm-password" name="confirm_password" class="form-control" placeholder="أعد إدخال كلمة المرور" required>
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">إنشاء الحساب</button>
         </form>
     </div>
     <footer>
@@ -65,4 +70,3 @@
     </footer>
 </body>
 </html>
-
